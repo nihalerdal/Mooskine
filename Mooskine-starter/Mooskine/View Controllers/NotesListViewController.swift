@@ -79,7 +79,7 @@ class NotesListViewController: UIViewController, UITableViewDataSource {
         try? dataController.viewContext.save()
         notes.insert(note, at: 0)
             
-        tableView.insertRows(at: [IndexPath(row: numberOfNotes - 1, section: 0)], with: .fade)
+        tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .fade)
         updateEditButtonState()
     }
 
@@ -154,6 +154,7 @@ class NotesListViewController: UIViewController, UITableViewDataSource {
         if let vc = segue.destination as? NoteDetailsViewController {
             if let indexPath = tableView.indexPathForSelectedRow {
                 vc.note = note(at: indexPath)
+                vc.dataController = dataController
 
                 vc.onDelete = { [weak self] in
                     if let indexPath = self?.tableView.indexPathForSelectedRow {
