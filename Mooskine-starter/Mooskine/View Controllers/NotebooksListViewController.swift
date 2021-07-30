@@ -101,7 +101,7 @@ class NotebooksListViewController: UIViewController, UITableViewDataSource {
         
         notebooks.insert(notebook, at: 0)
         
-        tableView.insertRows(at: [IndexPath(row: numberOfNotebooks - 1, section: 0)], with: .fade)
+        tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .fade)
         updateEditButtonState()
     }
 
