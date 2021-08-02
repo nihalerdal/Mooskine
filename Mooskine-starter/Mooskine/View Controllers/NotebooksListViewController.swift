@@ -16,25 +16,14 @@ class NotebooksListViewController: UIViewController, UITableViewDataSource {
     /// The `Notebook` objects being presented
     var notebooks: [Notebook] = []
     var dataController : DataController!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.titleView = UIImageView(image: #imageLiteral(resourceName: "toolbar-cow"))
         navigationItem.rightBarButtonItem = editButtonItem
         updateEditButtonState()
         
-        //2.Fetch Request
-        let fetchRequest: NSFetchRequest<Notebook> = Notebook.fetchRequest()
-        let sortDescriptor = NSSortDescriptor(key: "creationDate", ascending: false)
-        fetchRequest.sortDescriptors = [sortDescriptor]
-        
-        //3.use fetchRequest
-        if let result = try? dataController.viewContext.fetch(fetchRequest){
-            notebooks = result
-            tableView.reloadData()
-        }
-        
-        let notebook:Notebook 
+        reloadNotebook()
         
        
     }
@@ -99,9 +88,21 @@ class NotebooksListViewController: UIViewController, UITableViewDataSource {
         //ask the context to save the notebook to the persistence store
         try? dataController.viewContext.save()
         
-        notebooks.insert(notebook, at: 0)
+       reloadNotebook()
+    }
+    
+    fileprivate func reloadNotebook() {
+        //2.Fetch Request
+        let fetchRequest: NSFetchRequest<Notebook> = Notebook.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "creationDate", ascending: false)
+        fetchRequest.sortDescriptors = [sortDescriptor]
         
-        tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .fade)
+        //3.use fetchRequest
+        if let result = try? dataController.viewContext.fetch(fetchRequest){
+            notebooks = result
+            tableView.reloadData()
+        }
+        
         updateEditButtonState()
     }
 
