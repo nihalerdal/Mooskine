@@ -22,6 +22,7 @@
 		95A58D4C26A10F5E00DC83E8 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A58D4B26A10F5E00DC83E8 /* DataController.swift */; };
 		95A58D5126B6490D00DC83E8 /* Notebook+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A58D5026B6490D00DC83E8 /* Notebook+Extensions.swift */; };
 		95A58D5326B65B8500DC83E8 /* Note+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A58D5226B65B8500DC83E8 /* Note+Extensions.swift */; };
+		95A58D5526BF0A0E00DC83E8 /* ListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A58D5426BF0A0E00DC83E8 /* ListDataSource.swift */; };
 		A76557E71F8BC1FB00EFF9B8 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A76557E51F8BC1AC00EFF9B8 /* OpenSans-Bold.ttf */; };
 		A76557E81F8BC1FB00EFF9B8 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A76557E61F8BC1AC00EFF9B8 /* OpenSans-Regular.ttf */; };
 		A76557E91F8BC1FB00EFF9B8 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A76557E41F8BC1AC00EFF9B8 /* OpenSans-Semibold.ttf */; };
@@ -57,6 +58,8 @@
 		95A58D4B26A10F5E00DC83E8 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		95A58D5026B6490D00DC83E8 /* Notebook+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notebook+Extensions.swift"; sourceTree = "<group>"; };
 		95A58D5226B65B8500DC83E8 /* Note+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+Extensions.swift"; sourceTree = "<group>"; };
+		95A58D5426BF0A0E00DC83E8 /* ListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDataSource.swift; sourceTree = "<group>"; };
+		95A58D5626C2089D00DC83E8 /* Mooskine-2021-09-08-attributedString.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Mooskine-2021-09-08-attributedString.xcdatamodel"; sourceTree = "<group>"; };
 		A76557E41F8BC1AC00EFF9B8 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		A76557E51F8BC1AC00EFF9B8 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		A76557E61F8BC1AC00EFF9B8 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -147,6 +150,7 @@
 				95A58D4F26B648E200DC83E8 /* Managed Object Extensions */,
 				95A58D40269E8D2D00DC83E8 /* Mooskine.xcdatamodeld */,
 				95A58D4B26A10F5E00DC83E8 /* DataController.swift */,
+				95A58D5426BF0A0E00DC83E8 /* ListDataSource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -316,6 +320,7 @@
 				03B269A01F2F8AAD00C7433C /* Cell.swift in Sources */,
 				03B2699D1F2F8AA100C7433C /* NotesListViewController.swift in Sources */,
 				95A58D5126B6490D00DC83E8 /* Notebook+Extensions.swift in Sources */,
+				95A58D5526BF0A0E00DC83E8 /* ListDataSource.swift in Sources */,
 				03B2699F1F2F8AAA00C7433C /* NoteCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -567,9 +572,10 @@
 		95A58D40269E8D2D00DC83E8 /* Mooskine.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				95A58D5626C2089D00DC83E8 /* Mooskine-2021-09-08-attributedString.xcdatamodel */,
 				95A58D41269E8D2D00DC83E8 /* Mooskine.xcdatamodel */,
 			);
-			currentVersion = 95A58D41269E8D2D00DC83E8 /* Mooskine.xcdatamodel */;
+			currentVersion = 95A58D5626C2089D00DC83E8 /* Mooskine-2021-09-08-attributedString.xcdatamodel */;
 			path = Mooskine.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
