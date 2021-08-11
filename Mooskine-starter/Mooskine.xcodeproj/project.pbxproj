@@ -25,6 +25,7 @@
 		95A58D5526BF0A0E00DC83E8 /* ListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A58D5426BF0A0E00DC83E8 /* ListDataSource.swift */; };
 		95A58D5826C3434200DC83E8 /* UpdateToAttributedStrings.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 95A58D5726C3434200DC83E8 /* UpdateToAttributedStrings.xcmappingmodel */; };
 		95A58D5A26C3456A00DC83E8 /* UpdateToAttributedStringsPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A58D5926C3456A00DC83E8 /* UpdateToAttributedStringsPolicy.swift */; };
+		95A58D5C26C357C600DC83E8 /* Pathifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A58D5B26C357C600DC83E8 /* Pathifier.swift */; };
 		A76557E71F8BC1FB00EFF9B8 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A76557E51F8BC1AC00EFF9B8 /* OpenSans-Bold.ttf */; };
 		A76557E81F8BC1FB00EFF9B8 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A76557E61F8BC1AC00EFF9B8 /* OpenSans-Regular.ttf */; };
 		A76557E91F8BC1FB00EFF9B8 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A76557E41F8BC1AC00EFF9B8 /* OpenSans-Semibold.ttf */; };
@@ -64,6 +65,7 @@
 		95A58D5626C2089D00DC83E8 /* Mooskine-2021-09-08-attributedString.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Mooskine-2021-09-08-attributedString.xcdatamodel"; sourceTree = "<group>"; };
 		95A58D5726C3434200DC83E8 /* UpdateToAttributedStrings.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = UpdateToAttributedStrings.xcmappingmodel; sourceTree = "<group>"; };
 		95A58D5926C3456A00DC83E8 /* UpdateToAttributedStringsPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateToAttributedStringsPolicy.swift; sourceTree = "<group>"; };
+		95A58D5B26C357C600DC83E8 /* Pathifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pathifier.swift; sourceTree = "<group>"; };
 		A76557E41F8BC1AC00EFF9B8 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		A76557E51F8BC1AC00EFF9B8 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		A76557E61F8BC1AC00EFF9B8 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				95A58D4B26A10F5E00DC83E8 /* DataController.swift */,
 				95A58D5426BF0A0E00DC83E8 /* ListDataSource.swift */,
 				95A58D5926C3456A00DC83E8 /* UpdateToAttributedStringsPolicy.swift */,
+				95A58D5B26C357C600DC83E8 /* Pathifier.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				95A58D5126B6490D00DC83E8 /* Notebook+Extensions.swift in Sources */,
 				95A58D5526BF0A0E00DC83E8 /* ListDataSource.swift in Sources */,
 				03B2699F1F2F8AAA00C7433C /* NoteCell.swift in Sources */,
+				95A58D5C26C357C600DC83E8 /* Pathifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
