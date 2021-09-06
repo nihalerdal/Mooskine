@@ -18,6 +18,7 @@ class NoteDetailsViewController: UIViewController {
     var note: Note!
     
     var dataController: DataController!
+    var saveObserverToken: Any?
 
     /// A closure that is run when the user asks to delete the current note
     var onDelete: (() -> Void)?
@@ -40,6 +41,12 @@ class NoteDetailsViewController: UIViewController {
         // keyboard toolbar configuration
               configureToolbarItems()
               configureTextViewInputAccessoryView()
+        
+        addSaveNotificationObserver()
+    }
+    
+    deinit {
+        removeSaveNotificationObserver()
     }
 
     @IBAction func deleteNote(sender: Any) {
@@ -180,5 +187,29 @@ extension NoteDetailsViewController {
         alert.addAction(cancelAction)
         alert.addAction(deleteAction)
         present(alert, animated: true, completion: nil)
+    }
+}
+
+extension NoteDetailsViewController{
+    func addSaveNotificationObserver() {
+        removeSaveNotificationObserver()
+        saveObserverToken = NotificationCenter.default.addObserver(forName: .NSManagedObjectContextObjectsDidChange, object: dataController.viewContext, queue:nil, using: handleSaveNotification(notification:))
+        
+    }
+    
+    func removeSaveNotificationObserver(){
+        if let token = saveObserverToken{
+            NotificationCenter.default.removeObserver(token)
+        }
+    }
+    
+    fileprivate func reloadText() {
+        textView.attributedText = note.attributedText
+    }
+    
+    func handleSaveNotification(notification: Notification){
+        DispatchQueue.main.async {
+            self.reloadText()
+        }
     }
 }
